@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+          <img src="img/logo1.png" class="logo">
+          <div id="first-screen">
+                  <a href="#add-schedule" id="add-schedu">Add Schedule</a>
+                </div>
+        </div>
+      </div>
+    <!-- -------- About ------- -->
+    <div id="add-schedule">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="about-col-1">
+                    <img src="img/user.png" alt="">
+                </div> -->
+                <div class="about-col-2">
+                    <h1 class="sub-title" style="color: #4CAF50;">Add Your Schedule Here</h1><br>
+                    <p>The class scheduling website is a convenient tool for students to plan and organize their academic schedule. 
+                      With its user-friendly interface and customizable features, users can easily input their courses, 
+                      select preferred days and times, and avoid scheduling conflicts.</p><br><br><br>
+
+                         <div class="tab-titles">
+                            <p class="tab-links active-links" onclick="opentab('monday')">Monday</p>
+                            <p class="tab-links" onclick="opentab('tuesday')">  Tuesday</p>
+                            <p class="tab-links" onclick="opentab('wednesday')">  Wednesday</p>
+                            <p class="tab-links" onclick="opentab('thursday')">  Thursday</p>
+                            <p class="tab-links" onclick="opentab('friday')">  Friday</p>
+                            <p class="tab-links" onclick="opentab('saturday')">  Saturday</p>
+                            <!-- <p class="tab-links" onclick="opentab('sunday')">  Sunday</p> -->
+
+                         </div>
+                         <div class="tab-contents active-tab" id="monday">
+                            <ul>
+                                <li>
+                                  <span style="color: transparent; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <b style="color: transparent;">Class Detail</b><br><br>
+                                  <b style="color: transparent;"> Class Name</b>
+                                  <input type="text" style="color: transparent; background-color: transparent; border: 0px;">
+                                  <b style="color: transparent;">Class Time</b>
+                                  <input type="time" name="" id="" style="color: transparent; background-color: transparent; border: 0px;">
+                                </li>
+                                <li>
+                                  <form>
+                                    <span style="color: #4CAF50; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                    <label for="time1" style="font-size: 25px;">Time:</label>
+                                    <input type="time" id="time1" name="time1">
+                                    <label for="note1" style="font-size: 25px;"><br><br>Note:</label>
+                                    <input type="text" id="note1" name="note1">
+                                    <br><br>
+                                    <span style="color: #4CAF50; font-size: 30px;">12 Pm - 3 Pm</span><br><br>
+                                    <label for="time2" style="font-size: 25px;">Time:</label>
+                                    <input type="time" id="time2" name="time2">
+                                    <label for="note2" style="font-size: 25px;"> <br><br>Note:</label>
+                                    <input type="text" id="note2" name="note2">
+                                    <br><br>
+                                    <span style="color: #4CAF50; font-size: 30px;">3 Pm - 6 Pm</span><br><br>
+                                    <label for="time3" style="font-size: 25px;">Time:</label>
+                                    <input type="time" id="time3" name="time3">
+                                    <label for="note3" style="font-size: 25px;"> <br><br>Note:</label>
+                                    <input type="text" id="note3" name="note3">
+                                    <br><br><br>
+                                    <span style="color: #4CAF50; font-size: 30px;">6 Pm - 9 Pm</span><br><br>
+                                    <label for="time4" style="font-size: 25px;">Time:</label>
+                                    <input type="time" id="time4" name="time4">
+                                    <label for="note4" style="font-size: 25px;"> <br><br>Note:</label>
+                                    <input type="text" id="note4" name="note4">
+                                    <br><br><br><br>
+                                    <button class="btn" type="button" id="schedule-notification-btn">Set Reminder</button>
+                                  </form>
+                                  <!-- <li>
+                                    <span>12 Pm - 3 Pm</span><br><br>
+                                    <label for="notification-time">Notification Time:</label>
+      <input class="demo" type="time" id="notification-time" name="notification-time" value="09:00" ><br><br>
+      <label for="notification-message">Notification Message:</label>
+      <input id="notification-message" name="notification-message" placeholder="Enter your message here"><br><br>
+       <button class="btn" id="schedule-notification-btn">Schedule Notification</button><br><br>
+                                    <span>3 Pm - 6 Pm</span><br><br>
+                                    <label for="notification-time">Notification Time:</label>
+      <input class="demo" type="time" id="notification-time" name="notification-time" value="09:00" ><br><br>
+      <label for="notification-message">Notification Message:</label>
+      <input id="notification-message" name="notification-message" placeholder="Enter your message here"><br><br>
+       <button class="btn" id="schedule-notification-btn">Schedule Notification</button><br><br>
+                                  <li>
+                                    <span>6 Pm - 9 Pm</span><br><br>
+                                    <label for="notification-time">Notification Time:</label>
+      <input class="demo" type="time" id="notification-time" name="notification-time" value="09:00" ><br><br>
+      <label for="notification-message">Notification Message:</label>
+      <input id="notification-message" name="notification-message" placeholder="Enter your message here"><br><br>
+       <button class="btn" id="schedule-notification-btn">Schedule Notification</button><br><br>
+                                
+                              </ul>
+                               -->
+                         </div>
+                         <div class="tab-contents" id="tuesday">
+                            <ul>
+                                <li>
+                                  <span style="color: transparent; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <b style="color: transparent;">Class Detail</b><br><br>
+                                  <b style="color: transparent;"> Class Name</b>
+                                  <input type="text" style="color: transparent; background-color: transparent; border: 0px;">
+                                  <b style="color: transparent;">Class Time</b>
+                                  <input type="time" name="" id="" style="color: transparent; background-color: transparent; border: 0px;">
+                                </li>
+                                <form>
+                                  <span style="color: #4CAF50; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <label for="time5" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time5" name="time5">
+                                  <label for="note5" style="font-size: 25px;"><br><br>Note:</label>
+                                  <input type="text" id="note5" name="note5">
+                                  <br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">12 Pm - 3 Pm</span><br><br>
+                                  <label for="time6" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time6" name="time6">
+                                  <label for="note6" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note6" name="note6">
+                                  <br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">3 Pm - 6 Pm</span><br><br>
+                                  <label for="time7" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time7" name="time7">
+                                  <label for="note7" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note7" name="note7">
+                                  <br><br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">6 Pm - 9 Pm</span><br><br>
+                                  <label for="time8" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time8" name="time8">
+                                  <label for="note8" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note8" name="note8">
+                                  <br><br><br><br>
+                                  <button class="btn" type="button" id="schedule-notification-btn1">Set Reminder</button>
+                                </form>
+                         </div>
+                         <div class="tab-contents" id="wednesday">
+                            <ul>
+                                <li>
+                                  <span style="color: transparent; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <b style="color: transparent;">Class Detail</b><br><br>
+                                  <b style="color: transparent;"> Class Name</b>
+                                  <input type="text" style="color: transparent; background-color: transparent; border: 0px;">
+                                  <b style="color: transparent;">Class Time</b>
+                                  <input type="time" name="" id="" style="color: transparent; background-color: transparent; border: 0px;">
+                                </li>
+                                <form>
+                                  <span style="color: #4CAF50; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <label for="time9" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time9" name="time9">
+                                  <label for="note9" style="font-size: 25px;"><br><br>Note:</label>
+                                  <input type="text" id="note9" name="note9">
+                                  <br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">12 Pm - 3 Pm</span><br><br>
+                                  <label for="time10" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time10" name="time10">
+                                  <label for="note10" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note10" name="note10">
+                                  <br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">3 Pm - 6 Pm</span><br><br>
+                                  <label for="time11" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time11" name="time11">
+                                  <label for="note11" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note11" name="note11">
+                                  <br><br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">6 Pm - 9 Pm</span><br><br>
+                                  <label for="time12" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time12" name="time12">
+                                  <label for="note12" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note12" name="note12">
+                                  <br><br><br><br>
+                                  <button class="btn" type="button" id="schedule-notification-btn2">Set Reminder</button>
+                                </form>
+                         </div>
+                         <div class="tab-contents" id="thursday">
+                            <ul>
+                                <li>
+                                  <span style="color: transparent; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <b style="color: transparent;">Class Detail</b><br><br>
+                                  <b style="color: transparent;"> Class Name</b>
+                                  <input type="text" style="color: transparent; background-color: transparent; border: 0px;">
+                                  <b style="color: transparent;">Class Time</b>
+                                  <input type="time" name="" id="" style="color: transparent; background-color: transparent; border: 0px;">
+                                </li>
+                                <form>
+                                  <span style="color: #4CAF50; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <label for="time13" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time13" name="time13">
+                                  <label for="note13" style="font-size: 25px;"><br><br>Note:</label>
+                                  <input type="text" id="note13" name="note13">
+                                  <br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">12 Pm - 3 Pm</span><br><br>
+                                  <label for="time14" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time14" name="time14">
+                                  <label for="note14" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note14" name="note14">
+                                  <br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">3 Pm - 6 Pm</span><br><br>
+                                  <label for="time15" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time15" name="time15">
+                                  <label for="note15" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note15" name="note15">
+                                  <br><br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">6 Pm - 9 Pm</span><br><br>
+                                  <label for="time16" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time16" name="time16">
+                                  <label for="note16" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note16" name="note16">
+                                  <br><br><br><br>
+                                  <button class="btn" type="button" id="schedule-notification-btn3">Set Reminder</button>
+                                </form>
+                         </div>
+
+                         <div class="tab-contents" id="friday">
+                            <ul>
+                                <li>
+                                  <span style="color: transparent; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <b style="color: transparent;">Class Detail</b><br><br>
+                                  <b style="color: transparent;"> Class Name</b>
+                                  <input type="text" style="color: transparent; background-color: transparent; border: 0px;">
+                                  <b style="color: transparent;">Class Time</b>
+                                  <input type="time" name="" id="" style="color: transparent; background-color: transparent; border: 0px;">
+                                </li>
+                                <form>
+                                  <span style="color: #4CAF50; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <label for="time17" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time17" name="time17">
+                                  <label for="note17" style="font-size: 25px;"><br><br>Note:</label>
+                                  <input type="text" id="note17" name="note17">
+                                  <br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">12 Pm - 3 Pm</span><br><br>
+                                  <label for="time18" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time18" name="time18">
+                                  <label for="note18" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note18" name="note18">
+                                  <br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">3 Pm - 6 Pm</span><br><br>
+                                  <label for="time19" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time19" name="time19">
+                                  <label for="note19" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note19" name="note19">
+                                  <br><br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">6 Pm - 9 Pm</span><br><br>
+                                  <label for="time20" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time20" name="time20">
+                                  <label for="note20" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note20" name="note20">
+                                  <br><br><br><br>
+                                  <button class="btn" type="button" id="schedule-notification-btn4">Set Reminder</button>
+                                </form>
+                         </div>
+
+                         <div class="tab-contents" id="saturday">
+                            <ul>
+                                <li>
+                                  <span style="color: transparent; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <b style="color: transparent;">Class Detail</b><br><br>
+                                  <b style="color: transparent;"> Class Name</b>
+                                  <input type="text" style="color: transparent; background-color: transparent; border: 0px;">
+                                  <b style="color: transparent;">Class Time</b>
+                                  <input type="time" name="" id="" style="color: transparent; background-color: transparent; border: 0px;">
+                                </li>
+                                <form>
+                                  <span style="color: #4CAF50; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <label for="time21" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time21" name="time21">
+                                  <label for="note21" style="font-size: 25px;"><br><br>Note:</label>
+                                  <input type="text" id="note21" name="note21">
+                                  <br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">12 Pm - 3 Pm</span><br><br>
+                                  <label for="time22" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time22" name="time22">
+                                  <label for="note22" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note22" name="note22">
+                                  <br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">3 Pm - 6 Pm</span><br><br>
+                                  <label for="time23" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time23" name="time23">
+                                  <label for="note23" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note23" name="note23">
+                                  <br><br><br>
+                                  <span style="color: #4CAF50; font-size: 30px;">6 Pm - 9 Pm</span><br><br>
+                                  <label for="time24" style="font-size: 25px;">Time:</label>
+                                  <input type="time" id="time24" name="time24">
+                                  <label for="note24" style="font-size: 25px;"> <br><br>Note:</label>
+                                  <input type="text" id="note24" name="note24">
+                                  <br><br><br><br>
+                                  <button class="btn" type="button" id="schedule-notification-btn5">Set Reminder</button>
+                                </form>
+                         </div>
+
+                         <!-- <div class="tab-contents" id="sunday">
+                            <ul>
+                                <li>
+                                  <span style="color: transparent; font-size: 30px;">9 Am - 12 Pm</span><br><br>
+                                  <b style="color: transparent;">Class Detail</b><br><br>
+                                  <b style="color: transparent;"> Class Name</b>
+                                  <input type="text" style="color: transparent; background-color: transparent; border: 0px;">
+                                  <b style="color: transparent;">Class Time</b>
+                                  <input type="time" name="" id="" style="color: transparent; background-color: transparent; border: 0px;">
+                                </li>
+                                <li>
+                                    <span>9 Am - 12 Pm</span><br><br>
+                                    <label for="notification-time">Notification Time:</label>
+      <input class="demo" type="time" id="notification-time" name="notification-time" value="09:00" ><br><br>
+      <label for="notification-message">Notification Message:</label>
+      <input id="notification-message" name="notification-message" placeholder="Enter your message here"><br><br>
+      <button class="btn" id="schedule-notification-btn">Schedule Notification</button><br><br>
+                                  <li>
+                                    <span>12 Pm - 3 Pm</span><br><br>
+                                    <label for="notification-time">Notification Time:</label>
+      <input class="demo" type="time" id="notification-time" name="notification-time" value="09:00" ><br><br>
+      <label for="notification-message">Notification Message:</label>
+      <input id="notification-message" name="notification-message" placeholder="Enter your message here"><br><br>
+       <button class="btn" id="schedule-notification-btn">Schedule Notification</button><br><br>
+                                    <span>3 Pm - 6 Pm</span><br><br>
+                                    <label for="notification-time">Notification Time:</label>
+      <input class="demo" type="time" id="notification-time" name="notification-time" value="09:00" ><br><br>
+      <label for="notification-message">Notification Message:</label>
+      <input id="notification-message" name="notification-message" placeholder="Enter your message here"><br><br>
+       <button class="btn" id="schedule-notification-btn">Schedule Notification</button><br><br>
+                                  <li>
+                                    <span>6 Pm - 9 Pm</span><br><br>
+                                    <label for="notification-time">Notification Time:</label>
+      <input class="demo" type="time" id="notification-time" name="notification-time" value="09:00" ><br><br>
+      <label for="notification-message">Notification Message:</label>
+      <input id="notification-message" name="notification-message" placeholder="Enter your message here"><br><br>
+       <button class="btn" id="schedule-notification-btn">Schedule Notification</button><br><br>
+                                
+                              </ul>
+                         </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------- Services ------- -->
+    <!-- <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsam ex voluptatum aut laboriosam,
+                        enim iusto iure assumenda </p>
+                        
+                        <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsam ex voluptatum aut laboriosam,
+                        enim iusto iure assumenda </p>
+                        <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsam ex voluptatum aut laboriosam,
+                        enim iusto iure assumenda </p>
+                        <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- -------- Portfolio ------- -->
+    <!-- <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Video App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div> -->
+
+    <!-- -------- Contact ------- -->
+    <!-- <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@example</p>
+                    <p><i class="fa-solid fa-phone"></i>0987654321</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- ------------------------------------ Footer ----------------------------- -->
+<section class="footer">
+    <h4> <u> <b>About Us</b> </u> </h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Aut nostrum porro a commodi incidunt ducimus deleniti itaque! Nobis facilis inventore commodi optio, <br>
+    aut earum est officiis rerum id dolor minus.</p>
+    <div class="icons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-pinterest"></i></a>
+    </div>
+    <p>Made By <i class="fa-solid fa-copyright"></i> Lalwa</p>
+</section>
+
+<script>
+// -------------------- Monday --------------------- 
+
+  // Add event listener to schedule notification button
+  document.getElementById("schedule-notification-btn").addEventListener("click", function() {
+        // Get the user input for the notification time and message
+        var notificationTimes = [];
+        var notificationNotes = [];
+        var time1 = document.getElementById("time1").value;
+        var note1 = document.getElementById("note1").value;
+        var time2 = document.getElementById("time2").value;
+        var note2 = document.getElementById("note2").value;
+        var time3 = document.getElementById("time3").value;
+        var note3 = document.getElementById("note3").value;
+        var time4 = document.getElementById("time4").value;
+        var note4 = document.getElementById("note4").value;
+      
+        
+        // Push the notification times and messages to the arrays if they are not empty
+        if (time1 && note1) {
+          notificationTimes.push(time1);
+          notificationNotes.push(note1);
+        }
+        if (time2 && note2) {
+          notificationTimes.push(time2);
+          notificationNotes.push(note2);
+        }
+        if (time3 && note3) {
+          notificationTimes.push(time3);
+          notificationNotes.push(note3);
+        }
+        if (time4 && note4) {
+          notificationTimes.push(time4);
+          notificationNotes.push(note4);
+        }
+       
+
+        // Request permission to show notifications
+        Notification.requestPermission().then(function(permission) {
+          if (permission === "granted") {
+            // Loop through the notification times and schedule the notifications
+            for (var i = 0; i < notificationTimes.length; i++) {
+              // Create a new Date object for today's date and the notification time
+              var today = new Date();
+              var notificationDate = new Date(today.getFullYear(), today.getMonth(), today.getDate(), notificationTimes[i].split(":")[0], notificationTimes[i].split(":")[1]);
+              
+              // If the notification time is earlier than the current time, set it for tomorrow instead
+              if (notificationDate < today) {
+                notificationDate.setDate(notificationDate.getDate() + 1);
+              }
+              
+              // Calculate the time until the next notification
+              var timeUntilNotification = notificationDate - today;
+              
+              // Schedule the notification
+              setTimeout(function(note) {
+                // Create the notification
+                var notification = new Notification("Reminder", {
+                  body: note,
+                  icon: "path/to/icon.png",
+                  // Add any other properties of the notification here
+                });
+              }, timeUntilNotification, notificationNotes[i]);
+            }
+            
+            alert("Reminder set!");
+          } else {
+            alert("Permission to show notifications was not granted.");
+          }
+        });
+      });
+
+// ----------------------------------- Tuesday ------------------------
+
+// Add event listener to schedule notification button
+document.getElementById("schedule-notification-btn1").addEventListener("click", function() {
+        // Get the user input for the notification time and message
+        var notificationTimes = [];
+        var notificationNotes = [];
+       
+        var time5 = document.getElementById("time5").value;
+        var note5 = document.getElementById("note5").value;
+        var time6 = document.getElementById("time6").value;
+        var note6 = document.getElementById("note6").value;
+        var time7 = document.getElementById("time7").value;
+        var note7 = document.getElementById("note7").value;
+        var time8 = document.getElementById("time8").value;
+        var note8 = document.getElementById("note8").value;
+        
+        // Push the notification times and messages to the arrays if they are not empty
+        
+        if (time5 && note5) {
+          notificationTimes.push(time5);
+          notificationNotes.push(note5);
+        }
+        if (time6 && note6) {
+          notificationTimes.push(time6);
+          notificationNotes.push(note6);
+        }
+        if (time7 && note7) {
+          notificationTimes.push(time7);
+          notificationNotes.push(note7);
+        }
+        if (time8 && note8) {
+          notificationTimes.push(time8);
+          notificationNotes.push(note8);
+        }
+
+        // Request permission to show notifications
+        Notification.requestPermission().then(function(permission) {
+          if (permission === "granted") {
+            // Loop through the notification times and schedule the notifications
+            for (var i = 0; i < notificationTimes.length; i++) {
+              // Create a new Date object for today's date and the notification time
+              var today = new Date();
+              var notificationDate = new Date(today.getFullYear(), today.getMonth(), today.getDate(), notificationTimes[i].split(":")[0], notificationTimes[i].split(":")[1]);
+              
+              // If the notification time is earlier than the current time, set it for tomorrow instead
+              if (notificationDate < today) {
+                notificationDate.setDate(notificationDate.getDate() + 1);
+              }
+              
+              // Calculate the time until the next notification
+              var timeUntilNotification = notificationDate - today;
+              
+              // Schedule the notification
+              setTimeout(function(note) {
+                // Create the notification
+                var notification = new Notification("Reminder", {
+                  body: note,
+                  icon: "path/to/icon.png",
+                  // Add any other properties of the notification here
+                });
+              }, timeUntilNotification, notificationNotes[i]);
+            }
+            
+            alert("Reminder set!");
+          } else {
+            alert("Permission to show notifications was not granted.");
+          }
+        });
+      });
+
+// ---------------------------- Wednesday ----------------------
+
+// Add event listener to schedule notification button
+document.getElementById("schedule-notification-btn2").addEventListener("click", function() {
+        // Get the user input for the notification time and message
+        var notificationTimes = [];
+        var notificationNotes = [];
+       
+        var time9  = document.getElementById("time9").value;
+        var note9  = document.getElementById("note9").value;
+        var time10 = document.getElementById("time10").value;
+        var note10 = document.getElementById("note10").value;
+        var time11 = document.getElementById("time11").value;
+        var note11 = document.getElementById("note11").value;
+        var time12 = document.getElementById("time12").value;
+        var note12 = document.getElementById("note12").value;
+        
+        // Push the notification times and messages to the arrays if they are not empty
+        
+        if (time9 && note9) {
+          notificationTimes.push(time9);
+          notificationNotes.push(note9);
+        }
+        if (time10 && note10) {
+          notificationTimes.push(time10);
+          notificationNotes.push(note10);
+        }
+        if (time11 && note11) {
+          notificationTimes.push(time11);
+          notificationNotes.push(note11);
+        }
+        if (time12 && note12) {
+          notificationTimes.push(time12);
+          notificationNotes.push(note12);
+        }
+
+        // Request permission to show notifications
+        Notification.requestPermission().then(function(permission) {
+          if (permission === "granted") {
+            // Loop through the notification times and schedule the notifications
+            for (var i = 0; i < notificationTimes.length; i++) {
+              // Create a new Date object for today's date and the notification time
+              var today = new Date();
+              var notificationDate = new Date(today.getFullYear(), today.getMonth(), today.getDate(), notificationTimes[i].split(":")[0], notificationTimes[i].split(":")[1]);
+              
+              // If the notification time is earlier than the current time, set it for tomorrow instead
+              if (notificationDate < today) {
+                notificationDate.setDate(notificationDate.getDate() + 1);
+              }
+              
+              // Calculate the time until the next notification
+              var timeUntilNotification = notificationDate - today;
+              
+              // Schedule the notification
+              setTimeout(function(note) {
+                // Create the notification
+                var notification = new Notification("Reminder", {
+                  body: note,
+                  icon: "path/to/icon.png",
+                  // Add any other properties of the notification here
+                });
+              }, timeUntilNotification, notificationNotes[i]);
+            }
+            
+            alert("Reminder set!");
+          } else {
+            alert("Permission to show notifications was not granted.");
+          }
+        });
+      });
+
+// ------------------- Thursday -----------------
+
+// Add event listener to schedule notification button
+document.getElementById("schedule-notification-btn3").addEventListener("click", function() {
+        // Get the user input for the notification time and message
+        var notificationTimes = [];
+        var notificationNotes = [];
+       
+        var time13 = document.getElementById("time13").value;
+        var note13 = document.getElementById("note13").value;
+        var time14 = document.getElementById("time14").value;
+        var note14 = document.getElementById("note14").value;
+        var time15 = document.getElementById("time15").value;
+        var note15 = document.getElementById("note15").value;
+        var time16 = document.getElementById("time16").value;
+        var note16 = document.getElementById("note16").value;
+        
+        // Push the notification times and messages to the arrays if they are not empty
+        
+        if (time13 && note13) {
+          notificationTimes.push(time13);
+          notificationNotes.push(note13);
+        }
+        if (time14 && note14) {
+          notificationTimes.push(time14);
+          notificationNotes.push(note14);
+        }
+        if (time15 && note15) {
+          notificationTimes.push(time15);
+          notificationNotes.push(note15);
+        }
+        if (time16 && note16) {
+          notificationTimes.push(time16);
+          notificationNotes.push(note16);
+        }
+
+        // Request permission to show notifications
+        Notification.requestPermission().then(function(permission) {
+          if (permission === "granted") {
+            // Loop through the notification times and schedule the notifications
+            for (var i = 0; i < notificationTimes.length; i++) {
+              // Create a new Date object for today's date and the notification time
+              var today = new Date();
+              var notificationDate = new Date(today.getFullYear(), today.getMonth(), today.getDate(), notificationTimes[i].split(":")[0], notificationTimes[i].split(":")[1]);
+              
+              // If the notification time is earlier than the current time, set it for tomorrow instead
+              if (notificationDate < today) {
+                notificationDate.setDate(notificationDate.getDate() + 1);
+              }
+              
+              // Calculate the time until the next notification
+              var timeUntilNotification = notificationDate - today;
+              
+              // Schedule the notification
+              setTimeout(function(note) {
+                // Create the notification
+                var notification = new Notification("Reminder", {
+                  body: note,
+                  icon: "path/to/icon.png",
+                  // Add any other properties of the notification here
+                });
+              }, timeUntilNotification, notificationNotes[i]);
+            }
+            
+            alert("Reminder set!");
+          } else {
+            alert("Permission to show notifications was not granted.");
+          }
+        });
+      });
+
+
+    // ------------------- fRIDAY -----------------
+
+// Add event listener to schedule notification button
+document.getElementById("schedule-notification-btn4").addEventListener("click", function() {
+        // Get the user input for the notification time and message
+        var notificationTimes = [];
+        var notificationNotes = [];
+       
+        var time17 = document.getElementById("time17").value;
+        var note17 = document.getElementById("note17").value;
+        var time18 = document.getElementById("time18").value;
+        var note18 = document.getElementById("note18").value;
+        var time19 = document.getElementById("time19").value;
+        var note19 = document.getElementById("note19").value;
+        var time20 = document.getElementById("time20").value;
+        var note20 = document.getElementById("note20").value;
+        
+        // Push the notification times and messages to the arrays if they are not empty
+        
+        if (time17 && note17) {
+          notificationTimes.push(time17);
+          notificationNotes.push(note17);
+        }
+        if (time18 && note18) {
+          notificationTimes.push(time18);
+          notificationNotes.push(note18);
+        }
+        if (time19 && note19) {
+          notificationTimes.push(time19);
+          notificationNotes.push(note19);
+        }
+        if (time20 && note20) {
+          notificationTimes.push(time20);
+          notificationNotes.push(note20);
+        }
+
+        // Request permission to show notifications
+        Notification.requestPermission().then(function(permission) {
+          if (permission === "granted") {
+            // Loop through the notification times and schedule the notifications
+            for (var i = 0; i < notificationTimes.length; i++) {
+              // Create a new Date object for today's date and the notification time
+              var today = new Date();
+              var notificationDate = new Date(today.getFullYear(), today.getMonth(), today.getDate(), notificationTimes[i].split(":")[0], notificationTimes[i].split(":")[1]);
+              
+              // If the notification time is earlier than the current time, set it for tomorrow instead
+              if (notificationDate < today) {
+                notificationDate.setDate(notificationDate.getDate() + 1);
+              }
+              
+              // Calculate the time until the next notification
+              var timeUntilNotification = notificationDate - today;
+              
+              // Schedule the notification
+              setTimeout(function(note) {
+                // Create the notification
+                var notification = new Notification("Reminder", {
+                  body: note,
+                  icon: "path/to/icon.png",
+                  // Add any other properties of the notification here
+                });
+              }, timeUntilNotification, notificationNotes[i]);
+            }
+            
+            alert("Reminder set!");
+          } else {
+            alert("Permission to show notifications was not granted.");
+          }
+        });
+      });
+ 
+          // ------------------- Saturday -----------------
+
+// Add event listener to schedule notification button
+document.getElementById("schedule-notification-btn5").addEventListener("click", function() {
+        // Get the user input for the notification time and message
+        var notificationTimes = [];
+        var notificationNotes = [];
+       
+        var time21 = document.getElementById("time21").value;
+        var note21 = document.getElementById("note21").value;
+        var time22 = document.getElementById("time22").value;
+        var note22 = document.getElementById("note22").value;
+        var time23 = document.getElementById("time23").value;
+        var note23 = document.getElementById("note23").value;
+        var time24 = document.getElementById("time24").value;
+        var note24 = document.getElementById("note24").value;
+        
+        // Push the notification times and messages to the arrays if they are not empty
+        
+        if (time21 && note21) {
+          notificationTimes.push(time21);
+          notificationNotes.push(note21);
+        }
+        if (time22 && note22) {
+          notificationTimes.push(time22);
+          notificationNotes.push(note22);
+        }
+        if (time23 && note23) {
+          notificationTimes.push(time23);
+          notificationNotes.push(note23);
+        }
+        if (time24 && note24) {
+          notificationTimes.push(time24);
+          notificationNotes.push(note24);
+        }
+
+        // Request permission to show notifications
+        Notification.requestPermission().then(function(permission) {
+          if (permission === "granted") {
+            // Loop through the notification times and schedule the notifications
+            for (var i = 0; i < notificationTimes.length; i++) {
+              // Create a new Date object for today's date and the notification time
+              var today = new Date();
+              var notificationDate = new Date(today.getFullYear(), today.getMonth(), today.getDate(), notificationTimes[i].split(":")[0], notificationTimes[i].split(":")[1]);
+              
+              // If the notification time is earlier than the current time, set it for tomorrow instead
+              if (notificationDate < today) {
+                notificationDate.setDate(notificationDate.getDate() + 1);
+              }
+              
+              // Calculate the time until the next notification
+              var timeUntilNotification = notificationDate - today;
+              
+              // Schedule the notification
+              setTimeout(function(note) {
+                // Create the notification
+                var notification = new Notification("Reminder", {
+                  body: note,
+                  icon: "path/to/icon.png",
+                  // Add any other properties of the notification here
+                });
+              }, timeUntilNotification, notificationNotes[i]);
+            }
+            
+            alert("Reminder set!");
+          } else {
+            alert("Permission to show notifications was not granted.");
+          }
+        });
+      });
+
+// ---------------------------- Hover Js Code ----------------------
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-links")
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-links");
+    document.getElementById(tabname).classList.add("active-tab")
+}
+
+var dialogueBtn = document.getElementById("dialogue-btn");
+var dialogueBox = document.getElementById("dialogue-box");
+
+function openDialogue() {
+dialogueBox.style.display = "block";
+}
+
+function closeDialogue() {
+dialogueBox.style.display = "none";
+}
+
+dialogueBtn.addEventListener("click", openDialogue);
+</script>    
+</body>
+</html>
